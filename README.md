@@ -1,4 +1,4 @@
-# gitswitch
+# gitswitcher
 
 A simple automation tool for quickly switching between Git profiles. This script allows you to easily change your global Git configuration to different predefined profiles.
 
@@ -10,55 +10,55 @@ A simple automation tool for quickly switching between Git profiles. This script
    git clone https://github.com/devMoisa/git-switcher.git
    ```
 
-2. **Move the script to the `~/.config/git-scripts` directory:**
+2. **Move the script to the `~/.config/gitswitcher` directory:**
 
    ```bash
-   mkdir -p ~/.config/git-scripts
-   mv gitswitch ~/.config/git-scripts/gitswitch
+   mkdir -p ~/.config/gitswitcher
+   mv gitswitcher.sh ~/.config/gitswitcher/gitswitcher.sh
    ```
 
 3. **Make the script executable:**
 
    ```bash
-   chmod +x ~/.config/git-scripts/gitswitch
+   chmod +x ~/.config/gitswitcher/script.sh
    ```
 
 4. **Add an alias to your shell configuration file (`~/.bashrc`, `~/.zshrc`, etc.):**
 
    ```bash
-   echo 'alias gitswitch="~/.config/git-scripts/gitswitch"' >> ~/.bashrc
+   echo 'alias gitswitcher="~/.config/gitswitcher/script.sh"' >> ~/.bashrc
    # For Zsh users, use ~/.zshrc instead of ~/.bashrc
    source ~/.bashrc  # Or source ~/.zshrc for Zsh
    ```
 
-Now you can use the command `gitswitch` to switch between Git profiles.
+Now you can use the command `gitswitcher` to switch between Git profiles.
 
 ## Usage
 
 To switch between different Git profiles, use the following command:
 
 ```bash
-gitswitch --set [profile_name]
+gitswitcher --set [profile_name]
 ```
 
 For example:
 
 ```bash
-gitswitch --set profile01
-gitswitch --set profile02
+gitswitcher --set profile01
+gitswitcher --set profile02
 ```
 
 ## Configuration
 
-To set up different Git profiles, create configuration files in your home directory. For example:
+To set up different Git profiles, create configuration files in the `~/.config/gitswitcher` directory. For example:
 
-- `~/.gitconfig_profile01`
-- `~/.gitconfig_profile02`
+- `~/.config/gitswitcher/profile01.sh`
+- `~/.config/gitswitcher/profile02.sh`
 
 Each file should contain the Git configuration for that specific profile. For example:
 
 ```ini
-# ~/.gitconfig_profile01
+# ~/.config/gitswitcher/profile01.sh
 [user]
     name = Moisés Profile 01
     email = moises01@example.com
@@ -68,7 +68,7 @@ Each file should contain the Git configuration for that specific profile. For ex
 ```
 
 ```ini
-# ~/.gitconfig_profile02
+# ~/.config/gitswitcher/profile02.sh
 [user]
     name = Moisés Profile 02
     email = moises02@example.com
@@ -84,7 +84,7 @@ The script will copy the selected profile to your global `.gitconfig` file, effe
 To switch to the first profile:
 
 ```bash
-gitswitch --set profile01
+gitswitcher --set profile01
 ```
 
 Output:
@@ -96,7 +96,7 @@ Switched to profile 01.
 To switch to the second profile:
 
 ```bash
-gitswitch --set profile02
+gitswitcher --set profile02
 ```
 
 Output:
