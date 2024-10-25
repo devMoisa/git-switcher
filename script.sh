@@ -2,9 +2,9 @@
 # Author: Moisés Vilas Boas
 # Contact: moisesboas@gmail.com
 
-# Path to configuration profiles
-PROFILE01="$HOME/.gitconfig_profile01"
-PROFILE02="$HOME/.gitconfig_profile02"
+# Paths for the configuration profiles stored in ~/.config/gitswitcher
+PROFILE01="$HOME/.config/gitswitcher/profile01.sh"
+PROFILE02="$HOME/.config/gitswitcher/profile02.sh"
 GLOBAL_CONFIG="$HOME/.gitconfig"
 
 # Function to change profile
@@ -32,3 +32,4 @@ else
     echo "Usage: $0 --set [profile01|profile02]"
     exit 1
 fi
+
