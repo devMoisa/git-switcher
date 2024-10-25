@@ -14,7 +14,7 @@ A simple automation tool for quickly switching between Git profiles. This script
 
    ```bash
    mkdir -p ~/.config/gitswitcher
-   mv gitswitcher.sh ~/.config/gitswitcher/gitswitcher.sh
+   mv script.sh ~/.config/gitswitcher/script.sh
    ```
 
 3. **Make the script executable:**
